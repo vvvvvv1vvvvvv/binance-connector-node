@@ -38,7 +38,7 @@ class APIBase {
 
   signRequest (method, path, params = {}) {
     params = removeEmptyValue(params)
-    const timestamp = Date.now()
+    const timestamp = Date.now() - 1000
     const queryString = buildQueryString({ ...params, timestamp })
     let signature
 
