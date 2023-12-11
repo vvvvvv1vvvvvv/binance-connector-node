@@ -11,7 +11,7 @@ const USD = superclass => class extends superclass {
   getUSDFutureAccount () {
     return this.signRequest(
       'GET',
-      '/fapi/v1/account'
+      '/fapi/v2/account'
     )
   }
 }
