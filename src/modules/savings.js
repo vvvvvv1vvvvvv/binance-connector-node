@@ -132,7 +132,7 @@ const Savings = superclass => class extends superclass {
   /**
    * Get Flexible Product Position (USER_DATA)<br>
    *
-   * GET /sapi/v1/lending/daily/token/position<br>
+   * GET /sapi/v1/simple-earn/flexible/position<br>
    *
    * {@link https://binance-docs.github.io/apidocs/spot/en/#get-flexible-product-position-user_data}
    *
@@ -143,7 +143,7 @@ const Savings = superclass => class extends superclass {
   savingsFlexibleProductPosition (asset, options = {}) {
     return this.signRequest(
       'GET',
-      '/sapi/v1/lending/daily/token/position',
+      '/sapi/v1/simple-earn/flexible/position',
       Object.assign(options, {
         ...(asset ? { asset } : {})
       })
